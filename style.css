@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+:root {
+  box-sizing: border-box;
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body * + * {
+  margin-top: 1.5em; /* global margins */
+}
+img {
+  max-width: 100%; /* ensure images don’t overflow their container */
+}
+
+body {
+  background-color: var(--light-gray);
+  font-family: "Karla", sans-serif;
+}
+
+.container {
+  margin: 70px auto;
+  width: 315px;
+}
+header {
+  background-color: #fff;
+  padding: 1.9em 1.5em;
+  color: var(--grayish-blue);
+  border-radius: 0.5em 0.5em 0 0;
+}
+h1 {
+  color: var(--cyan);
+  font-size: 1.4em;
+}
+h2 {
+  font-weight: 500;
+}
+header h2 {
+  color: var(--bright-yellow);
+  font-size: 1.2em;
+}
+header p {
+  line-height: 1.6;
+}
+.subcontainer {
+  margin-top: 0;
+}
+main {
+  background-color: var(--cyan);
+  padding: 1.5em 1.3em;
+  margin-top: 0;
+  color: var(--light-gray);
+}
+main h2 {
+  color: #fff;
+}
+main .price {
+  display: flex;
+  align-items: center;
+}
+main .dollars {
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.plan {
+  margin-top: 0;
+}
+main button {
+  border: none;
+  background-color: var(--bright-yellow);
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: hsla(203, 100%, 100%, 0.8);
+  padding: 0.6em;
+  width: 100%;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+main button:hover {
+  background-color: hsl(100, 68%, 48%);
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+aside {
+  background-color: hsla(179, 62%, 43%, 0.8);
+  margin-top: 0;
+  padding: 1.5em 1.3em;
+  color: var(--light-gray);
+  border-radius: 0 0 0.5em 0.5em;
+}
+aside h2 {
+  color: #fff;
+}
+aside ul {
+  list-style-type: none;
+}
+ul > li + li {
+  margin-top: 0.3em;
+}
+@media (min-width: 600px) {
+  .container {
+    width: 636px;
+    margin: 160px auto;
+  }
+  .subcontainer {
+    display: flex;
+  }
+  main {
+    width: 50%;
+    border-radius: 0 0 0 0.5em;
+  }
+  aside {
+    width: 50%;
+    border-radius: 0 0 0.5em 0;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
